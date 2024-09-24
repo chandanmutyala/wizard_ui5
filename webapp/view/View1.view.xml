@@ -1,0 +1,396 @@
+<mvc:View
+    height="100%"
+    controllerName="wizards.controller.View1"
+    xmlns:form="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
+    xmlns:u="sap.ui.unified"
+    xmlns:l="sap.ui.layout"
+    xmlns:tnt="sap.tnt"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+>
+    <Page>
+        <content>
+            <Select
+                id="categorySelect"
+                forceSelection="false"
+                change="onCategoryChange"
+                liveChange="onLiveChange"
+            >
+                <core:ListItem
+                    key="ProjectForm"
+                    text="Project In take Request Form"
+                />
+                <core:ListItem
+                    key="ProcurementForm"
+                    text="Procurement Intake Form"
+                />
+            </Select>
+            <Panel
+                id="ProjectForm"
+                visible="true"
+            >
+                <tnt:ToolHeader
+                    id="shellLikeToolHeader"
+                    class="sapUiTinyMargin"
+                >
+                    <Title
+                        text="Project In take Request Form"
+                        wrapping="false"
+                        id="productName"
+                    >
+                        <layoutData>
+                            <OverflowToolbarLayoutData priority="Disappear" />
+                        </layoutData>
+                    </Title>
+
+                    <ToolbarSpacer />
+                </tnt:ToolHeader>
+                <Wizard
+                    id="CreateProductWizard"
+                    finishButtonText="Finish"
+                    currentStep="PricingStep"
+                    class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+                    height="100%"
+                >
+                    <WizardStep
+                        id="ProductTypeStep"
+                        title="General Project Information"
+                        activate="onActivate"
+                    >
+                        <VBox class="">
+                            <f:SimpleForm
+                                id="234"
+                                editable="true"
+                                layout="ColumnLayout"
+                                columnsM="2"
+                                columnsL="3"
+                                columnsXL="4"
+                            >
+                                <f:content>
+                                    <core:Title text="" />
+                                    <Label text="Project Name" />
+                                    <Input value="{SupplierName}" />
+                                    <Label text="Customer" />
+                                    <Input value="{Street}" />
+
+                                    <Label text="Projected Start" />
+                                    <DatePicker value="{SupplierName}" />
+
+                                    <core:Title text="" />
+                                    <Label text="Projected End" />
+                                    <DatePicker value="{SupplierName}" />
+                                    <Label text="Project Description" />
+                                    <TextArea rows="4" />
+
+                                    <core:Title text="" />
+                                    <Label text="Requested By" />
+                                    <Input
+                                        value="{Sms}"
+                                        type="Tel"
+                                    />
+                                    <Label text="Presented By" />
+                                    <Input
+                                        value="{Mobile}"
+                                        type="Tel"
+                                    />
+                                    <Label text="Submitted" />
+                                    <Input
+                                        value="{Pager}"
+                                        type="Tel"
+                                    />
+                                </f:content>
+                            </f:SimpleForm>
+                            <f:SimpleForm
+                                id="SimpleFormChangeColumn_threeGroups234"
+                                editable="true"
+                                layout="ColumnLayout"
+                                title="To be Completed By PMO"
+                                columnsM="2"
+                                columnsL="3"
+                                columnsXL="4"
+                            >
+                                <f:content>
+                                    <core:Title text="" />
+                                    <Label text="Request Status" />
+                                    <Input value="{SupplierName}" />
+                                    <Label text="Comments" />
+                                    <Input value="{Street}" />
+
+                                    <core:Title text="" />
+                                    <Label text="Review Date" />
+                                    <DatePicker value="{SupplierName}" />
+
+                                    <core:Title text="" />
+                                    <Label text="Project Manager" />
+                                    <Input
+                                        value="{Sms}"
+                                        type="Tel"
+                                    />
+                                </f:content>
+                            </f:SimpleForm>
+                        </VBox>
+                    </WizardStep>
+                    <WizardStep
+                        id="ProductInfoStep"
+                        title="Stakeholder Information"
+                        activate="onActivate"
+                    />
+                    <WizardStep
+                        id="OptionalInfoStep"
+                        optional="false"
+                        title="Project Scope"
+                        activate="onActivate"
+                    />
+                    <WizardStep
+                        id="PricingStep"
+                        title="Documents"
+                        activate="onActivate"
+                    />
+                    <WizardStep
+                        id="PricingSteps"
+                        title="Comments"
+                        activate="onActivate"
+                    />
+                </Wizard>
+            </Panel>
+            <Panel
+                id="ProcurementForm"
+                visible="false"
+               
+            >
+                <tnt:ToolHeader
+                    id="shellLikeToolHeaders"
+                    class="sapUiTinyMargin"
+                >
+                    <Title
+                        text="Project In take Request Form"
+                        wrapping="false"
+                        id="productNames"
+                    >
+                        <layoutData>
+                            <OverflowToolbarLayoutData priority="Disappear" />
+                        </layoutData>
+                    </Title>
+
+                    <ToolbarSpacer />
+                </tnt:ToolHeader>
+
+                      	<Wizard id="CreateProductWizardssss" class="sapUiResponsivePadding--header sapUiResponsivePadding--content"
+								complete="wizardCompletedHandler">
+							<WizardStep id="ProductTypeSteps"
+										title="Department"
+										validated="true">
+								<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange480_12120Dual"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Please provide the information about the department."
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="2"
+			singleContainerFullSize="false" >
+			<f:content>
+				<core:Title text="Office" />
+				<Label text="Contact Person Name" />
+				<Input value="{SupplierName}" />
+				<Label text="Email" />
+				<Input value="{Street}">
+				</Input>
+				<Input value="{HouseNumber}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M4 S4" />
+					</layoutData>
+				</Input>
+				<!-- <Label text="ZIP Code/City" />
+				<Input value="{ZIPCode}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M4 S4" />
+					</layoutData>
+				</Input>
+				<Input value="{City}" /> -->
+				<!-- <Label text="Country" />
+				<Select id="country" selectedKey="{Country}">
+					<items>
+						<core:Item text="England" key="England"/>
+						<core:Item text="Germany" key="Germany"/>
+						<core:Item text="USA" key="USA"/>
+					</items>
+				</Select> -->
+				<core:Title text="Online" />
+                <Label text="Please indicate contact person's title" />
+				<Input value="{Twitter}" />
+				<Label text="Phone Number" />
+				<Input value="{Url}" type="Url" />
+				
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+							</WizardStep>
+							<WizardStep id="ProductInfoStes"
+										validated="false"
+										title="Supplier"
+										activate="additionalInfoValidation">
+								<VBox class="sapUiSmallMargin">
+		<f:SimpleForm id="SimpleFormChange480_12120Duals"
+			editable="true"
+			layout="ResponsiveGridLayout"
+			title="Please provide the available information about the supplier."
+			labelSpanXL="4"
+			labelSpanL="4"
+			labelSpanM="12"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="0"
+			emptySpanL="0"
+			emptySpanM="0"
+			emptySpanS="0"
+			columnsXL="2"
+			columnsL="2"
+			columnsM="2"
+			singleContainerFullSize="false" >
+			<f:content>
+				<core:Title text="" />
+				<Label text="Supplier Name" />
+				<Input value="{SupplierName}" />
+				<Label text="Contract Start Date" />
+				<DatePicker
+											id="DP"
+											displayFormat="short"
+											value="{/manufacturingDate}"/>
+				
+				<Input value="{HouseNumber}">
+					<layoutData>
+						<l:GridData span="XL2 L3 M4 S4" />
+					</layoutData>
+				</Input>
+				
+				<core:Title text="" />
+                <Label text="Supplier Phone Number" />
+				<Input value="{Twitter}" />
+				<Label text="Contract End Date" />
+				<DatePicker
+											id="DateP"
+											displayFormat="short"
+											value="{/manufacturingDate}"/>
+				
+			</f:content>
+		</f:SimpleForm>
+	</VBox>
+    <Table id="idCategoriesTable"
+    inset="false"
+    class="sapUiResponsiveMargin"
+    width="auto"
+    items="{
+        path: '/Categories'
+    }">
+    <headerToolbar>
+        <Toolbar>
+            <Title text="Product Categories" level="H2"/>
+        </Toolbar>
+    </headerToolbar>
+    <columns>
+        <Column>
+            <Text text="Category" />
+        </Column>
+        <Column hAlign="Center">
+            <Text text="Expected to Purchase" />
+        </Column>
+        <Column hAlign="Center">
+            <Text text="Not Expected to Purchase" />
+        </Column>
+    </columns>
+    <items>
+        <ColumnListItem>
+            <cells>
+                <Label text="{CategoryName}" />
+                <CheckBox selected="{ExpectedPurchase}" />
+                <CheckBox selected="{NotExpectedPurchase}" />
+            </cells>
+        </ColumnListItem>
+    </items>
+</Table>
+
+							</WizardStep>
+							<WizardStep id="OptionalInfoSteps"
+										validated="true"
+										activate="optionalStepActivation"
+										title="Documents">
+								<MessageStrip class="sapUiSmallMarginBottom"
+										text="You can validate steps by default with the validated='true' property of the step. The next button is always enabled."
+										showIcon="true"/>
+								<Text text="Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec ppellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien	corper eu, posuere malesuada nisl. Integer pellentesque leo sit amet dui vehicula, quis ullamcorper est pulvinar. Nam in libero sem. Suspendisse arcu metus, molestie a turpis a, molestie aliquet dui. Donec pulvinar, sapien	"/>
+								<form:SimpleForm
+										editable="true"
+										layout="ResponsiveGridLayout">
+									<Label text="Cover photo"/>
+									<u:FileUploader
+											width="100%"
+											tooltip="Upload product cover photo to the local server"
+											style="Emphasized"
+											placeholder="Choose a file for Upload..."/>
+									<Label text="Manufacturing date"/>
+									<DatePicker
+											id="DP3"
+											displayFormat="short"
+											value="{/manufacturingDate}"/>
+									<Label text="Availability"/>
+									<SegmentedButton selectedKey="{/availabilityType}">
+										<items>
+											<SegmentedButtonItem key="In store" text="In store"/>
+											<SegmentedButtonItem key="In depot" text="In depot"/>
+											<SegmentedButtonItem key="In repository" text="In repository"/>
+											<SegmentedButtonItem key="Out of stock" text="Out of stock"/>
+										</items>
+									</SegmentedButton>
+									<Label text="Size"/>
+									<Input value="{/size}"/>
+									<ComboBox maxWidth="100px" selectedKey="{/measurement}">
+										<core:Item key="X" text="X"/>
+										<core:Item key="Y" text="Y"/>
+										<core:Item key="Z" text="Z"/>
+									</ComboBox>
+
+								</form:SimpleForm>
+							</WizardStep>
+							<WizardStep id="PricingStepsss"
+										activate="pricingActivate"
+										complete="pricingComplete"
+										validated="true"
+										title="Comments">
+								<MessageStrip class="sapUiSmallMarginBottom"
+										text="You can use the wizard previousStep() and nextStep() methods to navigate from step to step without validation. Also you can use the GoToStep(step) method to scroll programmatically to previously visited steps."
+										showIcon="true"/>
+								<form:SimpleForm
+										editable="true"
+										layout="ResponsiveGridLayout">
+									<Label text="Price"/>
+									<Input value="{/productPrice}"/>
+									<Label text="Discount group"/>
+									<ComboBox selectedKey="{/discountGroup}">
+										<core:Item key="Kids" text="Kids"/>
+										<core:Item key="Teens" text="Teens"/>
+										<core:Item key="Adults" text="Adults"/>
+										<core:Item key="Elderly" text="Elderly"/>
+									</ComboBox>
+									<Label text=" VAT is included"/>
+									<CheckBox selected="{/productVAT}"/>
+								</form:SimpleForm>
+							</WizardStep>
+						</Wizard>  
+
+
+            </Panel>
+        </content>
+    </Page>
+</mvc:View>

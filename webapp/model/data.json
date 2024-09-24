@@ -1,0 +1,14 @@
+{
+    "Categories": [
+        {"CategoryName": "Capital Equipment", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Services for installation, implementation, and integration", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Various (e.g., furniture, hardware, general services etc.)", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Goods to Consume", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Medical Equipment", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Licensing of Software", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Maintenance / Service Plan / Warranty", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Hardware and Software for Computers", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Professional Services", "ExpectedPurchase": false, "NotExpectedPurchase": false},
+        {"CategoryName": "Financing", "ExpectedPurchase": false, "NotExpectedPurchase": false}
+    ]
+}

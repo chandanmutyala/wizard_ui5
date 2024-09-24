@@ -1,0 +1,4 @@
+/* Enter your custom styles here */
+.sapUiSizeCompact .sapUiFormEdit .sapUiFormCLSmallColumns .sapUiFormCLContainer>.sapUiFormTitle, .sapUiSizeCompact .sapUiFormEdit .sapUiFormCLSmallColumns .sapUiFormContainerToolbar>div:first-child {
+    margin-bottom: -42px !important;
+}
