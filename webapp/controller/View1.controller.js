@@ -7,7 +7,9 @@ function (Controller, JSONModel) {
 
     return Controller.extend("wizards.controller.View1", {
         onInit: function () {
-
+               var oModel = this.getOwnerComponent().getModel("dataModel");
+                this.getView().setModel(oModel,"items");
+                console.log(oModel);
         },
         onCategoryChange: function (oEvent) {
             // Get the selected key

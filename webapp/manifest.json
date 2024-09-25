@@ -64,6 +64,10 @@
         "settings": {
           "bundleName": "wizards.i18n.i18n"
         }
+      },
+      "dataModel" : {
+        "type": "sap.ui.model.json.JSONModel",
+        "uri": "./model/data.json"
       }
     },
     "resources": {

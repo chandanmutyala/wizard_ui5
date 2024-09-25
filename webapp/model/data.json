@@ -10,5 +10,9 @@
         {"CategoryName": "Hardware and Software for Computers", "ExpectedPurchase": false, "NotExpectedPurchase": false},
         {"CategoryName": "Professional Services", "ExpectedPurchase": false, "NotExpectedPurchase": false},
         {"CategoryName": "Financing", "ExpectedPurchase": false, "NotExpectedPurchase": false}
+    ],
+    "stake": [
+        {"CategoryName": "Stakeholder", "ExpectedPurchase": "", "NotExpectedPurchase": ""},
+        {"CategoryName": "Stakeholder", "ExpectedPurchase": "", "NotExpectedPurchase": ""}
     ]
 }

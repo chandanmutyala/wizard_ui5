@@ -2,3 +2,41 @@
 .sapUiSizeCompact .sapUiFormEdit .sapUiFormCLSmallColumns .sapUiFormCLContainer>.sapUiFormTitle, .sapUiSizeCompact .sapUiFormEdit .sapUiFormCLSmallColumns .sapUiFormContainerToolbar>div:first-child {
     margin-bottom: -42px !important;
 }
+
+.sapMListTblHighlightCol+.sapMListTblHeaderCell, .sapMListTblHighlightCell+.sapMListTblCell {
+    padding-left: 1rem;
+    background-color: #488FB1 !important;
+    color: white !important;
+    
+    
+}
+.dropdownbox{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+}
+
+.sapMColumnHeader>.sapMLabel, .sapMColumnHeader>.sapMText, .sapMListTblCell>.sapMSlt>.sapMSltLabel, .sapMListTblCell>.sapMObjectNumber, .sapMListTblCell>.sapMLabel, .sapMListTblCell>.sapMText {
+    text-align: inherit !important;
+    color: white !important;
+}
+.sapMColumnHeader .sapMText {
+    color: white !important; 
+}
+
+/* .sapMLabel{
+    color: white !important;
+} */
+
+
+.sapUiSizeCompact .sapMListTblHighlightCol+.sapMListTblCell.sapMListTblHeaderCell {
+    padding-left: .5rem;
+    color: white !important;
+    background-color: white !important;
+}
+.sapUiSizeCompact .sapMListTblCell.sapMListTblHeaderCell {
+    padding: 0;
+    color: white !important;
+    background: #488FB1 !important;
+}
